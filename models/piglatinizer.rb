@@ -13,7 +13,7 @@ class PigLatinizer
       elsif %w(a e i o u).include?(word[1])
         word[1..-1] + word[0] + "ay"
       elsif %w(a e i o u).include?(word[2])
-        word[2..-1] + word[0..1] + "ay"
+        word[2..-1] + word[0] + word[1]+ "ay"
       end
     end.join(" ")
   end
