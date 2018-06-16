@@ -14,6 +14,8 @@ class PigLatinizer
         word[1..-1] + word[0] + "ay"
       elsif %w(a e i o u A E I O U).include?(word[2])
         word[2..-1] + word[0] + word[1]+ "ay"
+      elsif %w(a e i o u A E I O U).include?(word[3])
+        word[3..-1] + word[0..2] + "ay"
       end
     end.join(" ")
   end
