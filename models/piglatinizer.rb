@@ -9,7 +9,7 @@ class PigLatinizer
   def piglatinize(text)
     text.split(" ").map do |word|
       if %w(a e i o u).include?(word[0])
-        word + "ay"
+        word + "way"
       elsif %w(a e i o u).include?(word[1])
         word[1..-1] + word[0] + "ay"
       elsif %w(a e i o u).include?(word[2])
